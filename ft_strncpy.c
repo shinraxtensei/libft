@@ -1,5 +1,5 @@
 #include"libft.h"
-#include<stdio.h>
+//#include<stdio.h>
 char *ft_strncpy(char *dest,const char *src, size_t n)
 {
     int i = 0;
@@ -12,9 +12,9 @@ char *ft_strncpy(char *dest,const char *src, size_t n)
     return (dest);
     
 }
-int main ()
+/*int main ()
 {
     char src[15]="hello";
     char dest[15];
     printf("%s",ft_strncpy(dest,src,3));
-}
+}*/

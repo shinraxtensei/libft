@@ -1,5 +1,5 @@
 #include"libft.h"
-#include<stdio.h>
+//#include<stdio.h>
 void *ft_memchr(const void *s, int c, size_t n)
 {
 //unsigned char	*temp;
@@ -17,10 +17,10 @@ void *ft_memchr(const void *s, int c, size_t n)
 
 }
 
-int main ()
+/*int main ()
 {
 unsigned char tab[15]= "hello";
  printf("%s",ft_memchr(tab,'e',15));
  
 
-}
+}*/

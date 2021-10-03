@@ -1,5 +1,5 @@
 #include"libft.h"
-#include<stdio.h>
+//#include<stdio.h>
 void ft_bzero(void *str, size_t len)
 {
     //unsigned char *temp;
@@ -14,9 +14,9 @@ void ft_bzero(void *str, size_t len)
     }
     
 }
-int main ()
+/*int main ()
 {
 char tab[50]= "hello afen asat";
 ft_bzero(tab,5);
 puts(tab);
-}
+}*/

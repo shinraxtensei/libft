@@ -1,5 +1,5 @@
 #include"libft.h"
-#include<stdio.h>
+//#include<stdio.h>
 char	*ft_strstr(const char *str,const char *to_find)
 {
 	int i;
@@ -21,7 +21,7 @@ char	*ft_strstr(const char *str,const char *to_find)
 	}
 	return (0);
 }
-int main ()
+/*int main ()
 {
     printf("%s",ft_strstr("hello",""));
-}
+}*/

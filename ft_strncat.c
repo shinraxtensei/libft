@@ -1,5 +1,5 @@
 #include"libft.h"
-#include<stdio.h>
+//#include<stdio.h>
 char *ft_strncat(char *dest, const char *src, size_t n)
 {
     int i = 0;
@@ -22,10 +22,10 @@ char *ft_strncat(char *dest, const char *src, size_t n)
 
 
 
-int main()
+/*int main()
 {
 char src[5]="world";
 char dest[15]="hello";
     
 printf("%s",ft_strncat(dest,src,3));
-}
+}*/

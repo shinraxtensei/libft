@@ -1,5 +1,5 @@
 #include"libft.h"
-#include<stdio.h>
+//#include<stdio.h>
 
 char *ft_strcpy(char *dest, char *src)
 {
@@ -12,9 +12,9 @@ while (src[i] != '\0')
 dest[i] = '\0';
 return (dest);
 }
-int main ()
+/*int main ()
 {
     char dest[15];
     char src[15] = "hello";
     printf("%s",ft_strcpy(dest,src));
-}
+}*/

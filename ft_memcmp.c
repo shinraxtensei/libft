@@ -1,5 +1,5 @@
 #include"libft.h"
-#include<stdio.h>
+//#include<stdio.h>
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
     while (n > 0)
@@ -13,7 +13,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
     return(0);
     
 }
-int main ()
+/*int main ()
 {
     printf("%i",ft_memcmp("zzz","zha",3));
-}
+}*/

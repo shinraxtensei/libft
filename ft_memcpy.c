@@ -1,5 +1,5 @@
 #include"libft.h"
-#include<stdio.h>
+//#include<stdio.h>
 void *ft_memcpy(void  *dest, const void *src, size_t n)
 {
    //char *temp1;
@@ -15,10 +15,10 @@ void *ft_memcpy(void  *dest, const void *src, size_t n)
    *(unsigned char *)dest = '\0';    
    return (dest); 
 }
-int main ()
+/*int main ()
 {
 char  src[10]="afen asat";
 char dest[10];
 ft_memcpy(dest,src,15);
 puts(dest);
-}
+}*/
