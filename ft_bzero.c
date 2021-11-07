@@ -1,22 +1,22 @@
-#include"libft.h"
-//#include<stdio.h>
-void ft_bzero(void *str, size_t len)
-{
-    //unsigned char *temp;
-    //int i;
-    //i = 0;
-    //temp = (unsigned char *)str;
-    while (len>0)
-    {
-        *(unsigned char *)str++= '\0';
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/01 11:33:01 by ahouari           #+#    #+#             */
+/*   Updated: 2021/11/01 11:33:43 by ahouari          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-        len--;
-    }
-    
-}
-/*int main ()
+#include"libft.h"
+
+void	ft_bzero(void *s, size_t len)
 {
-char tab[50]= "hello afen asat";
-ft_bzero(tab,5);
-puts(tab);
-}*/
+	while (len > 0)
+	{
+		*((unsigned char *)s++) = 0;
+		len--;
+	}
+}

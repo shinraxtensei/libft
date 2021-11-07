@@ -1,18 +1,28 @@
-#include"libft.h"
-//#include<stdio.h>
-char *ft_strchr(const char *str, int c)
-{
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/01 13:16:30 by ahouari           #+#    #+#             */
+/*   Updated: 2021/11/06 10:00:18 by ahouari          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    while (*(unsigned char *)str)
-    {
-        if (*(unsigned char *)str == (unsigned char)c)
-            return((unsigned char *) str);
-        str++;
-    }
-    return(NULL);
-}
-/*int main ()
+#include"libft.h"
+
+char	*ft_strchr(const char *str, int c)
 {
-    char s[20]="hello";
-    printf("%s",ft_strchr(s,'e'));
-}*/
+	while (*(char *)str)
+	{
+		if (*(char *)str == (char)c)
+			return ((char *) str);
+		str++;
+	}
+	if (c == 0)
+	{
+		return ((char *)str);
+	}
+	return (NULL);
+}

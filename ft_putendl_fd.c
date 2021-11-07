@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 10:41:24 by ahouari           #+#    #+#             */
-/*   Updated: 2021/11/06 09:45:59 by ahouari          ###   ########.fr       */
+/*   Created: 2021/11/02 12:49:17 by ahouari           #+#    #+#             */
+/*   Updated: 2021/11/06 09:58:08 by ahouari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_isprint(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	else
-		return (0);
+	if (s != NULL)
+	{
+		ft_putstr_fd(s, fd);
+		write(fd, "\n", 1);
+	}
 }

@@ -1,24 +1,32 @@
-#include"libft.h"
-//#include<stdio.h>
-void *ft_memcpy(void  *dest, const void *src, size_t n)
-{
-   //char *temp1;
-   //char *temp2;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/01 12:00:40 by ahouari           #+#    #+#             */
+/*   Updated: 2021/11/06 09:57:42 by ahouari          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-   //temp1 = (unsigned char *)dest;
-  // temp2 = (unsigned char *)src;
-   while (n>0)
-   {
-      *(unsigned char *)dest++ = *(unsigned char *)src++;
-      n--;
-   }
-   *(unsigned char *)dest = '\0';    
-   return (dest); 
-}
-/*int main ()
+#include"libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-char  src[10]="afen asat";
-char dest[10];
-ft_memcpy(dest,src,15);
-puts(dest);
-}*/
+	char	*udst;
+	char	*usrc;
+	size_t	i;
+
+	udst = (char *)dst;
+	usrc = (char *)src;
+	i = 0;
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	while (i < n)
+	{
+		udst[i] = usrc[i];
+		i++;
+	}
+	return (dst);
+}

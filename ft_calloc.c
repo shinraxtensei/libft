@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 10:41:24 by ahouari           #+#    #+#             */
-/*   Updated: 2021/11/06 09:45:59 by ahouari          ###   ########.fr       */
+/*   Created: 2021/11/01 16:19:44 by ahouari           #+#    #+#             */
+/*   Updated: 2021/11/02 13:02:51 by ahouari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_isprint(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	else
-		return (0);
+	void	*temp;
+
+	temp = (void *)malloc(size * count);
+	if (!temp)
+		return (NULL);
+	ft_bzero(temp, size * count);
+	return (temp);
 }

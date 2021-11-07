@@ -1,14 +1,18 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/01 13:06:28 by ahouari           #+#    #+#             */
+/*   Updated: 2021/11/05 09:31:13 by ahouari          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_tolower(int c)
-{
-	if (ft_isupper(c))
-		c = c + 32;
-	return (c);
-}
-#include "libft.h"
+#include"libft.h"
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c = c + 32;

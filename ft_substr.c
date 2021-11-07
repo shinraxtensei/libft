@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 10:41:24 by ahouari           #+#    #+#             */
-/*   Updated: 2021/11/06 09:45:59 by ahouari          ###   ########.fr       */
+/*   Created: 2021/11/02 08:57:42 by ahouari           #+#    #+#             */
+/*   Updated: 2021/11/06 10:11:20 by ahouari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	else
-		return (0);
+	size_t	i;
+	char	*substr;
+
+	substr = (char *) malloc(sizeof(char) * (len + 1));
+	if (!substr)
+		return (NULL);
+	i = 0;
+	while (start < (size_t)ft_strlen((char *)s) && s[start + i] && i < len)
+	{
+		substr[i] = s[start + i];
+		i++;
+	}
+	substr[i] = '\0';
+	return (substr);
 }
