@@ -6,7 +6,7 @@
 /*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 08:10:21 by ahouari           #+#    #+#             */
-/*   Updated: 2021/11/07 10:22:22 by ahouari          ###   ########.fr       */
+/*   Updated: 2021/11/08 13:33:38 by ahouari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ char	**ft_split(char const *s, char c)
 	const char	*start;
 	char		**arr_strs;
 
+	if (!s)
+		return (NULL);
 	arr_strs = (char **) malloc(((count_strs(s, c)) + 1) * sizeof(*arr_strs));
 	if (!arr_strs)
 		return (0);
@@ -48,11 +50,9 @@ char	**ft_split(char const *s, char c)
 			s++;
 		start = s;
 		len = 0;
-		while (*s && *s != c)
-		{
-			s++;
+		s--;
+		while (*(++s) && *(s) != c)
 			len++;
-		}
 		if (*(s - 1) != c)
 			arr_strs[i++] = ft_substr(start, 0, len);
 	}

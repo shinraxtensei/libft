@@ -6,7 +6,7 @@
 #    By: ahouari <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 10:12:19 by ahouari           #+#    #+#              #
-#    Updated: 2021/11/05 10:59:09 by ahouari          ###   ########.fr        #
+#    Updated: 2021/11/08 14:37:19 by ahouari          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,9 @@ CFLAGS=-Wall -Wextra -Werror
 
 RM=rm -f
 
-LDFLAGS=-L.
+#LDFLAGS=-L.
 
-LDLIBS=-lft
+#LDLIBS=-lft
 
 
 

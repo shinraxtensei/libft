@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahouari <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 13:04:33 by ahouari           #+#    #+#             */
-/*   Updated: 2021/11/05 09:14:23 by ahouari          ###   ########.fr       */
+/*   Created: 2021/11/08 08:44:12 by ahouari           #+#    #+#             */
+/*   Updated: 2021/11/08 08:44:33 by ahouari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	long int	i;
+	t_list	*tmp;
 
-	i = n;
-	if (i < 0)
+	if (lst)
 	{
-		ft_putchar_fd('-', fd);
-		i = i * -1;
-	}
-	if ((i >= 0) && (i <= 9))
-	{
-		ft_putchar_fd((i + '0'), fd);
-	}
-	if (i > 9)
-	{
-		ft_putnbr_fd((i / 10), fd);
-		ft_putnbr_fd((i % 10), fd);
+		if (*lst == NULL)
+			*lst = new;
+		else
+		{
+			tmp = ft_lstlast(*(lst));
+			tmp->next = new;
+		}
 	}
 }
