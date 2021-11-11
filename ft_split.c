@@ -42,7 +42,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	arr_strs = (char **) malloc(((count_strs(s, c)) + 1) * sizeof(*arr_strs));
 	if (!arr_strs)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (*s != '\0')
 	{
